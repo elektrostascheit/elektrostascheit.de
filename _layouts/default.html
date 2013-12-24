@@ -3,42 +3,46 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>{{ page.title }}</title>
+        <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.data.vars.name }}, {{ site.data.vars.title }}, {{ site.data.vars.zip }} {{ site.data.vars.city }} </title>
         <meta name="viewport" content="width=device-width">
 
-        <!-- syntax highlighting CSS -->
-        <link rel="stylesheet" href="/css/syntax.css">
-
-        <!-- Custom CSS -->
-        <link rel="stylesheet" href="/css/main.css">
-
+        <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.7.0/build/reset-fonts-grids/reset-fonts-grids.css" media="all" /> 
+        <link rel="stylesheet" type="text/css" href="/css/main.css" media="all" />
     </head>
     <body>
+    <div id="doc2" class="yui-t7">
+      <div id="inner">
 
-        <div class="site">
-          <div class="header">
-            <h1 class="title"><a href="/">{{ site.name }}</a></h1>
-            <a class="extra" href="/">home</a>
-          </div>
-
-          {{ content }}
-
-          <div class="footer">
-            <div class="contact">
-              <p>
-                Your Name<br />
-                What You Are<br />
-                you@example.com
-              </p>
+        <div id="hd">
+          <div class="yui-gc">
+            <div class="yui-u first">
+              <h1 id="headline"><a href="/">{{ site.data.vars.name }}</a></h1>
+              <h2>{{ site.data.vars.title }}</h2>
             </div>
-            <div class="contact">
-              <p>
-                <a href="https://github.com/yourusername">github.com/yourusername</a><br />
-                <a href="https://twitter.com/yourusername">twitter.com/yourusername</a><br />
-              </p>
+
+            <div class="yui-u">
+              <div class="contact-info">
+                <address>
+                  {{ site.data.vars.name }}<br/>
+                  {{ site.data.vars.address }}<br/>
+                  {{ site.data.vars.zip }} {{ site.data.vars.city }}<br/>
+                  Email: <a href="mailto:{{ site.data.vars.email }}">{{ site.data.vars.email }}</a><br/>
+                  Telefon: <a href="tel:{{ site.data.vars.phone.international }}">{{ site.data.vars.phone.local }}</a>
+                </address>
+              </div>
             </div>
           </div>
         </div>
 
+        {{ content }}
+
+        <div id="ft">
+          <p>{{ site.data.vars.name }} &mdash; <a href="mailto:{{ site.data.vars.email }}">{{ site.data.vars.email }}</a> &mdash; <a href="tel:{{ site.data.vars.phone.international }}">{{ site.data.vars.phone.local }}</a> &mdash;  <a href="/impressum">Impressum</a></p>
+        </div><!--// footer -->
+
+      </div><!-- // inner -->
+
+
+    </div><!--// doc -->
     </body>
 </html>

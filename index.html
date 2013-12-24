@@ -1,13 +1,46 @@
 ---
 layout: default
-title: Your New Jekyll Site
 ---
+<div id="bd">
+  <div id="yui-main">
+    <div class="yui-b">
 
-<div id="home">
-  <h1>Blog Posts</h1>
-  <ul class="posts">
-    {% for post in site.posts %}
-      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
-    {% endfor %}
-  </ul>
-</div>
+      <div class="yui-gf">
+        <div class="yui-u first">
+          <h2>Profil</h2>
+        </div>
+        <div class="yui-u">
+          <p class="enlarge">
+          {{ site.data.vars.title }} mit {{ site.time | date: "%Y" | minus: site.data.vars.since }} Jahren Erfahrung
+          </p>
+        </div>
+      </div><!--// .yui-gf -->
+
+
+      <div class="yui-gf last">
+        <div class="yui-u first">
+          <h2>Leistungen</h2>
+        </div>
+        <div class="yui-u">
+          <ul class="talent">
+            <li>Altbausanierung</li>
+            <li>Satelliten- und Antennentechnik</li>
+            <li class="last">Netzwerktechnik</li>
+          </ul>
+
+          <ul class="talent">
+            <li>Sicherheitstechnik</li>
+            <li>Beleuchtungstechnik</li>
+            <li class="last">Telefonanlagen</li>
+          </ul>
+
+          <ul class="talent">
+            <li>Sprech- und Videoanlagen</li>
+            <li>Gebäudesystemtechnik</li>
+            <li class="last">etc.</li>
+          </ul>
+        </div>
+      </div><!--// .yui-gf-->
+    </div><!--// .yui-b -->
+  </div><!--// yui-main -->
+</div><!--// bd -->

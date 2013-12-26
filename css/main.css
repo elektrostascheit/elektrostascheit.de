@@ -88,3 +88,15 @@ a#pdf:hover { background: #222; }
   color: #333;
   text-decoration: none;
 }
+
+#hd .logo{
+  float: left;
+  margin-right: 20px;
+}
+#hd .logo img{
+  width: 80px;
+}
+
+#hd .text{
+  float: left;
+}

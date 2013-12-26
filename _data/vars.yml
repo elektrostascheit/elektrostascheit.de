@@ -3,8 +3,10 @@ address: Falkenhorst 4
 zip: 15566
 city: Schöneiche bei Berlin
 email: udo@elektrostascheit.de
-title: Elektromeister
+title: Elektrotechnikermeister
+company_title: Innungsbetrieb
 phone:
-  local: 0172 3860061
-  international: +49-172-3860061
+  local: 030 22151736
+fax:
+  local: 030 22171537
 since: 1993
